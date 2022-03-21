@@ -1,0 +1,417 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Play', sans-serif;
+}
+
+h4 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+#pokedex {
+    /* background-color: rgb(175, 175, 175); */
+    width: 1100px;
+    height: 700px;
+    display: flex;
+}
+
+/* Izquierda */
+
+#left {
+    background-color: #dc0a2d;
+    width: 500px;
+    height: 700px;
+    border-radius: 4%;
+    border: solid #89061c 10px;
+}
+
+#btnSuperior {
+    width: 95%;
+    height: 100px;
+    position: relative;
+    top: 12px;
+    margin: 0 auto 0 auto;
+    display: flex;
+}
+
+#circuloAzul {
+    width: 90px;
+    height: 90px;
+    background-color: #28aafd;
+    border-radius: 50%;
+    border: #dedede solid 5px;
+}
+
+#brillo {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 15px;
+    left: 10px;
+    background-color: #a1dafe;
+    border-radius: 50%;
+}
+
+.brillo2 {
+    width: 8px;
+    height: 8px;
+    position: relative;
+    top: 3px;
+    left: 4px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+#circuloRojo {
+    width: 25px;
+    height: 25px;
+    background-color: #ff4763;
+    border-radius: 50%;
+    border: #dedede solid 2px;
+    position: relative;
+    left: 20px;
+}
+
+#circuloAmarillo {
+    width: 25px;
+    height: 25px;
+    background-color: #ffe748;
+    border-radius: 50%;
+    border: #dedede solid 2px;
+    position: relative;
+    left: 25px;
+}
+
+#circuloVerde {
+    width: 25px;
+    height: 25px;
+    background-color: #4fae5d;
+    border-radius: 50%;
+    border: #dedede solid 2px;
+    position: relative;
+    left: 30px;
+}
+
+#busqueda {
+    position: relative;
+    top: 30px;
+    left: 15%;
+}
+
+#pokeName {
+    background-color: #dedede;
+    border: 0;
+    border-radius: 30px;
+    outline: #a8a8a8 solid 2px;
+    padding: 5px 10px;
+    width: 150px;
+    margin-right: 25px;
+}
+
+#btnBuscar {
+	background:linear-gradient(to bottom, #ffa600 5%, #ff7b00 100%);
+	background-color:#ffa600;
+	border-radius:28px;
+	border:1px solid #ffaa00;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	/* font-family:Courier New; */
+	font-size:17px;
+	/* padding:16px 31px; */
+	padding:5px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffa600;
+}
+#btnBuscar:hover {
+	background:linear-gradient(to bottom, #ff7b00 5%, #ffa600 100%);
+	background-color:#ff7b00;
+}
+#btnBuscar:active {
+	position:relative;
+	top:1px;
+}
+
+#pantalla{
+    background-color: #dedede;
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+    position: relative;
+    top: 65px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#rojitos{
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#btnRojitos {
+    width: 15px;
+    height: 15px;
+    background-color: #dc0a2d;
+    border-radius: 50%;
+}
+
+#pokeImg {
+    background-color: #28aafd;
+    border: 5px solid black;
+    width: 250px;
+    height: 200px;
+}
+
+#btnRojoEsqInfIzq {
+    width: 30px;
+    height: 30px;
+    background-color: #dc0a2d;
+    border-radius: 50%;
+}
+
+#btnAbajo {
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+}
+
+#burguer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#lineaNegra {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+}
+
+
+#btnInferiorDPad {
+    /* background-color: #00d9ff; */
+    position: relative;
+    bottom: -100px;
+    height: 150px;
+}
+
+#circuloNegro {
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+
+#DPad {
+    position: absolute;
+    right: 30px;
+    top: 2px;
+}
+
+#negroRect{
+    width: 70px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    border-radius: 10px;
+}
+
+#negroRect:nth-child(2) {
+    background-color: #28aafd;
+    width: 70px;
+    height: 10px;
+    position: absolute;
+    top: 10px;
+    left: 220px;
+}
+
+#rectVerde {
+    background-color: #51ae5f;
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#rectVerde h4{
+    display: inline;
+}
+
+/* Separación */
+
+#separacion {
+    border-radius: 10px;
+    border: solid #89061c 8px;
+    position: relative;
+    top: 105px;
+    background-color: #dc0a2d;
+    width: 50px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rectSep {
+    width: 50px;
+    height: 50px;
+    border: #89061c 4px solid;
+}
+
+.rectSep:nth-child(2) {
+    height: 80%;
+}
+
+/* Derecha */
+
+#right {
+    border: solid #89061c 10px;
+    background-color: #dc0a2d;
+    width: 500px;
+    height: 600px;
+    border-radius: 4%;
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#movesRectNegro {
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    width: 400px;
+    height: 150px;
+    position: absolute;
+    top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#statsRectAzul {
+    background-color: #28aafd;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 220px;
+    width: 380px;
+    display: flex;
+    justify-content: center;
+}
+
+table td:nth-child(1) {
+    width: 170px;
+}
+
+table td:nth-child(2) {
+    margin-left: 170px;
+}
+
+#btnInferior {
+    position: absolute;
+    bottom: 15px;
+    width: 400px;
+    height: 180px;
+}
+
+#negro {
+    position: relative;
+    top: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#btnNegro {
+    width: 70px;
+    height: 10px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+#btnNegro:nth-child(2) {
+    position: relative;
+    margin-left: 50px;
+}
+
+#btnBlanco {
+    background-color: #dedede;
+    width: 180px;
+    height: 60px;
+    position: relative;
+    top: 30px;
+    border-radius: 10px;
+    display: flex;
+}
+
+#btn1Blanco {
+    width: 50%;
+}
+
+#btn1Blanco:nth-child(2) {
+    border-left: solid #787878 5px;
+}
+
+#btnAmarillo {
+    width: 50px;
+    height: 50px;
+    background-color: #ffdf18;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 50px;
+}
+
+#brillo3 {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 7px;
+    left: 9px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+#negro2 {
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#rectNegro {
+    background-color: #000000;
+    width: 180px;
+    height: 60px;
+    position: relative;
+    top: 30px;
+    border-radius: 10px;
+}

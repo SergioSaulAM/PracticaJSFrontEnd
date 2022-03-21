@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Pokedex</title>
+</head>
+
+<body>
+    <div id="pokedex">
+        <div id="left">
+            <div id="btnSuperior">
+                <div id="circuloAzul">
+                    <div id="brillo">
+                    </div>
+                </div>
+                <div id="circuloRojo">
+                    <div class="brillo2">
+                    </div>
+                </div>
+                <div id="circuloAmarillo">
+                    <div class="brillo2">
+                    </div>
+                </div>
+                <div id="circuloVerde">
+                    <div class="brillo2">
+                    </div>
+                </div>
+            </div>
+
+            <div id="busqueda">
+                <input type="text" placeholder="Pikachu" id="pokeName" name="pokeName">
+                <button id="btnBuscar" onclick="fetchPokemon()">Buscar Pokemon</button><br>
+            </div>
+
+            <div id="pantalla">
+                <div id="rojitos">
+                    <div id="btnRojitos"></div>
+                    <div id="btnRojitos"></div>
+                </div>
+                <!-- Imagen pokemon -->
+                <img src="https://i.ibb.co/C7PWmt6/Pok-Ball-icon-svg.png" alt="Pokeball" id="pokeImg" width="150px">
+
+                <div id="btnAbajo">
+                    <div id="btnRojoEsqInfIzq"></div>
+                    <div id="burguer">
+                        <div id="lineaNegra"></div>
+                        <div id="lineaNegra"></div>
+                        <div id="lineaNegra"></div>
+                        <div id="lineaNegra"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="btnInferiorDPad">
+                <div id="circuloNegro">
+                </div>
+                <div id="negroRect">
+                </div>
+                <div id="negroRect">
+                </div>
+
+                <div id="rectVerde">
+                    <!-- Tipo y nombre pokemon -->
+                    <div id="nom">
+                        <label for="pokeNombre">Nombre: </label>
+                        <h4 id="pokeNombre" style="display: inline-block; margin-top: 0;">Nombre</h4>
+                    </div>
+                    <div id="tipo">
+                        <label for="pokeTipo">Tipo: </label>
+                        <h4 id="pokeTipo" style="display: inline-block; margin-top: 0;">Tipo</h4>
+                    </div>
+                </div>
+
+                <!-- D Pad -->
+                <img src="https://i.ibb.co/jDN2Vmx/DPad.png" alt="DPad" id="DPad">
+            </div>
+        </div>
+
+
+
+        <div id="separacion">
+            <div class="rectSep"></div>
+            <div class="rectSep"></div>
+            <div class="rectSep"></div>
+        </div>
+
+
+
+        <div id="right">
+            <div id="movesRectNegro">
+                <ul>
+                    <li id="liMove1">Movimiento 1</li>
+                    <li id="liMove2">Movimiento 2</li>
+                    <li id="liMove3">Movimiento 3</li>
+                    <li id="liMove4">Movimiento 4</li>
+                    <li id="liMove5">Movimiento 5</li>
+                    <li id="liMove6">Movimiento 6</li>
+                </ul>
+                <ul>
+                    <li id="liMove7">Movimiento 7</li>
+                    <li id="liMove8">Movimiento 8</li>
+                    <li id="liMove9">Movimiento 9</li>
+                    <li id="liMove10">Movimiento 10</li>
+                    <li id="liMove11">Movimiento 11</li>
+                    <li id="liMove12">Movimiento 12</li>
+                </ul>
+            </div>
+
+            <div id="statsRectAzul">
+                <table>
+                    <tr>
+                        <td id="tdHeadingWidth"><label for="pokeHP">HP</label></td>
+                        <td id="tdPWidth">
+                            <p id="txtHP"></p>
+                        </td>
+                        <td><input type="range" id="pokeHP" name="pokeHP" min="0" max="100" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pokeAttack">Attack</label></td>
+                        <td>
+                            <p id="txtAttack"></p>
+                        </td>
+                        <td><input type="range" id="pokeAttack" name="pokeAttack" min="0" max="100" value=""><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pokeDeffence">Deffence</label></td>
+                        <td>
+                            <p id="txtDeffence"></p>
+                        </td>
+                        <td><input type="range" id="pokeDeffence" name="pokeDeffence" min="0" max="100" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pokeSpecialAttack">Special Attack</label></td>
+                        <td>
+                            <p id="txtSpecialAttack"></p>
+                        </td>
+                        <td><input type="range" id="pokeSpecialAttack" name="pokeSpecialAttack" min="0" max="100"
+                                value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pokeSpecialDeffence">Special Deffence</label></td>
+                        <td>
+                            <p id="txtSpecialDeffence"></p>
+                        </td>
+                        <td><input type="range" id="pokeSpecialDeffence" name="pokeSpecialDeffence" min="0" max="100"
+                                value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="pokeSpeed">Speed</label></td>
+                        <td>
+                            <p id="txtSpeed"></p>
+                        </td>
+                        <td><input type="range" id="pokeSpeed" name="pokeSpeed" min="0" max="100" value=""><br></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="btnInferior">
+                <div id="negro">
+                    <div id="btnNegro"></div>
+                    <div id="btnNegro"></div>
+                </div>
+
+                <div id="btnBlanco">
+                    <div id="btn1Blanco"></div>
+                    <div id="btn1Blanco"></div>
+                </div>
+
+                <div id="btnAmarillo">
+                    <div id="brillo3">
+                    </div>
+                </div>
+
+                <div id="negro2">
+                    <div id="rectNegro"></div>
+                    <div id="rectNegro"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <script src="./pokedexLauchX.js"></script>
+</footer>
+
+</html>
